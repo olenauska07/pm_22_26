@@ -32,7 +32,7 @@ export const js = () => {
 };
 
 export const img = () => {
-  return gulp.src('app/img/*')
+  return gulp.src('app/img/*', {encoding: false})
     .pipe(imagemin())
     .pipe(gulp.dest('dist/img'));
 };
