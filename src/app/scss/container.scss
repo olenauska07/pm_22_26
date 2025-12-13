@@ -1,0 +1,521 @@
+@mixin progressBar($height, $bg, $end-width, $duration) {
+
+  .progress {
+    height: $height;
+    background-color: rgba(224, 224, 224, 0.85);
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .progress-bar {
+    height: 6px;
+    background-color: $bg !important;
+    border-radius: 5px;
+    width: 20%;
+    animation: fill-#{$end-width} $duration forwards ease-in-out;
+  }
+
+  @keyframes fill-#{$end-width} {
+    to {
+      width: $end-width;
+    }
+  }
+}
+
+/* Ліва колонка */
+.sidebar {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+}
+
+.margin-left{
+    margin-left: 20px;
+}
+
+.sidebar h4,
+.sidebar p {
+    color: white;
+}
+
+.fas{
+    color: var(--primary-color);
+}
+
+.contact{
+    padding-top: 30px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+    position: relative;  /* Додаємо відносне позиціонування для розміщення лінії */
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+    position: relative;  /* Додаємо відносне позиціонування для розміщення лінії */
+}
+
+.contact-item i {
+    font-size: 22px;
+    margin-right: 10px;
+}
+
+.contact-item .info {
+    display: flex;
+    align-items: center;
+}
+
+.contact-item::after {
+    content: "";  /* Псевдоелемент для лінії */
+    position: absolute;  /* Абсолютне позиціонування для розміщення лінії */
+    top: 0;
+    left: 40px;  /* Розміщуємо лінію безпосередньо після іконки */
+    height: 100%;  /* Розтягує лінію по висоті контейнера */
+    width: 1px;  /* Ширина лінії */
+    background-color: var(--primary-color);  /* Колір лінії */
+    margin-left: 10px;  /* Простір між іконкою та лінією */
+}
+
+
+
+.skills h3 {
+    text-align: left;         /* Center-align the title */
+    font-size: 24px;            /* Title size */
+    margin-bottom: 5px;        /* Spacing below the title */
+    color: white;                /* Title text color */
+    margin-top: 20px;
+}
+
+.skill-progress{
+    margin-bottom: 20px;
+}
+
+.skills .progress-bar {
+    height: 5px; /* Встановіть вужчу висоту */
+    background-color: var(--primary-color) !important; /* Помаранчевий колір */
+    border-radius: 5px;
+    width: 30%; /* Початкова ширина 0% */
+    animation: fillBar 3s forwards ease-in-out; /* Застосуємо анімацію для заповнення */
+}
+
+/* Можна змінити також сам прогрес-бар, щоб він мав правильний відступ */
+.skills .progress {
+    height: 5px; /* Зменшити висоту прогрес-бару */
+    background-color: rgba(224, 224, 224, 0.85); /* Легкий фон для прогрес-бару */
+    border-radius: 5px;
+    width: 100%; /* Ширина прогрес-бару */
+    margin-top: 2px; /* Відступ зверху */
+}
+.skills .progress-bar-1 {
+    animation: fillBarEducation1 2s forwards ease-in-out; /* Анімація для першого прогрес-бару */
+}
+/* Вирівнювання елементів у колонках */
+.skill-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.skill-item {
+    flex: 0 0 48%;
+    color: white;
+}
+
+.skill-html {
+    flex: 0 0 48%;
+}
+
+/* Праві секції */
+.content {
+    padding: 20px;
+}
+
+.black{
+    color: black;
+    font-weight: 600;
+}
+
+.title{
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.Job, .experience-progress, .experience-item, .hobbies{
+    margin: 0px 20px;
+}
+
+.hobbies ul {
+    list-style: none;
+    padding: 0;
+}
+
+.hobbies ul li {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.hobbies ul li i {
+    margin-right: 10px;
+}
+
+.bottom-sections {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+/* Job Experience section */
+.experience-item .job-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.experience-item .company {
+    color: var(--font-color);
+}
+
+.experience-item .location {
+    color: var(--highlight-color);
+}
+
+/* Прогрес-бари */
+
+
+.skill-item .progress{
+    background-color: #f6ae86;
+}
+
+.skill-item .progress-bar {
+    height: 100%;
+    background-color: var(--primary-color) !important; /* Темно-синій колір, додаємо !important для перекриття інших стилів */
+    border-radius: 10px;
+    width: 0;
+    animation: fillBar 2s forwards ease-in-out;
+    animation-delay: var(--delay, 0s);
+    transition: width 2s ease;
+    position: relative;
+}
+
+/* Додаємо коло, яке виходить за межі */
+
+
+@keyframes fillBar {
+    to {
+        width: var(--progress-width);
+    }
+}
+
+
+.phone-container, .website-container, .address-container {
+    background-color: #f6ae86;  /* Персиковий фон */
+    padding: 15px 20px;         /* Відступи для внутрішнього простору */
+    border-radius: 25px;        /* Округлені кути */
+    color: white;               /* Білий текст */
+    font-size: 18px;            /* Розмір шрифту */
+    display: flex;              /* Вирівнювання іконки та тексту по горизонталі */
+    align-items: center;        /* Вертикальне вирівнювання */
+    justify-content: flex-start;/* Вирівнювання вмісту по лівому краю */
+    width: 350px;               /* Збільшена ширина */
+    gap: 10px;                  /* Відстань між іконкою і текстом */
+    text-align: left;           /* Вирівнювання тексту по лівому краю */
+    white-space: normal;        /* Дозволяє перенос тексту */
+    min-height: 50px;           /* Мінімальна висота, щоб контейнер мав нормальний розмір */
+}
+
+.custom-left {
+    margin-left: -20px; /* Adjust the value to move it further */
+}
+.education {
+    display: flex;
+    flex-direction: column;
+    
+    gap: 10px; /* Використовуємо gap для кращого контролю відстані */
+}
+
+.education-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px; /* Зменшили відступ між елементами */
+}
+
+.year {
+    writing-mode: vertical-lr;  /* Оборот тексту на вертикальний напрям */
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;  /* Відступ між роками і текстом */
+    color: white;  /* Білий колір для року */
+    background-color:#ff8474 ;  /* Помаранчевий колір фону */
+    padding: 20px 0 ;  /* Збільшено висоту і ширину */
+    border-radius: 15px;  /* Округлення кутів */
+    transform: rotate(180deg);  /* Відзеркалити текст */
+}
+
+.degree-info {
+    flex: 1;
+}
+.years {
+    writing-mode: vertical-lr;  /* Вертикальне розташування тексту */
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #ff8474;  /* Помаранчевий колір фону */
+    padding: 5px 0; /* Зменшено padding */
+    border-radius: 15px;
+    transform: rotate(180deg);  /* Відзеркалення тексту */
+    white-space: nowrap;
+    margin-right: 5px; /* Встановлено відступ 5px */
+}
+
+.degree-info {
+    flex: 1;
+}
+.experience-item {
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid #ddd; /* Лінія розділення */
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.year-wrapper {
+    flex: 0 0 auto; /* Фіксована ширина для року */
+    margin-right: 30px; /* Збільшено відступ між роком і текстом */
+    text-align: center;
+}
+
+.year-wrapper .years {
+    display: flex;
+    justify-content: center; /* Вирівнювання по горизонталі */
+    align-items: center; /* Вирівнювання по вертикалі */
+    background-color: #ff8474; /* Помаранчевий фон */
+    color: #fff; /* Білий текст */
+    padding: 10px; /* Збільшено відступ для витягнутого вигляду */
+    font-size: 1.2em; /* Збільшено розмір шрифту */
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: center;
+    width: 30px; /* Збільшено ширину для витягнутого вигляду */
+    height: 150px; /* Витягнута висота */
+    border-radius: 15px; /* Круглі кути */
+}
+
+.unik{
+    font-weight: bold;
+    font-style: italic;
+}
+
+.small-distance{
+    margin-top: -2px;
+    margin-bottom: -2px;
+}
+
+.content-wrapper {
+    flex: 1; /* Контент займає весь доступний простір */
+}
+
+.position {
+    margin: 0 0 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+
+.company {
+    margin: 0 0 5px;
+    font-size: 1em;
+    color: #666;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.location {
+    margin: 0 0 15px;
+    font-size: 0.95em;
+    color: #cd1111;
+    float: right;
+}
+
+.description {
+    margin: 0;
+    font-size: 0.95em;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+
+.language-charts {
+    display: flex; /* Горизонтальне вирівнювання */
+    justify-content: center; /* Вирівнювання по центру */
+    gap: 20px; /* Відстань між діаграмами */
+    margin-top: 20px;
+}
+
+.language-item {
+    width: 120px; /* Зменшена ширина кожної діаграми */
+    text-align: center; /* Вирівнювання тексту по центру */
+    transform: translateY(-40px);
+    font-weight: 900;
+}
+
+.chart-title{
+    transform: translateY(100px);
+}
+
+.percent{
+    font-size: 20px;
+}
+
+canvas {
+    width: 100% !important; /* Ширина канваса 100% від контейнера */
+    height: 120px !important; /* Зменшена висота кожної діаграми */
+}
+.hobbies ul {
+    display: flex;
+    justify-content: space-around; /* Рівномірне розподілення елементів */
+    padding: 0;
+    list-style: none;
+}
+
+.hobby-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px; /* Відстань між елементами */
+    text-align: center; /* Текст по центру */
+    position: relative;
+}
+
+.hobby-icon {
+    width: 120px;
+    height: 120px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    color: #ff8474;
+    font-size: 30px; /* Збільшити розмір іконки */
+    position: relative;
+}
+
+.hobby-text, .fas2{
+    transform: translateY(-20px);
+}
+
+.fas2{
+    color: var(--secondary-color);
+}
+
+.hobby-text {
+    font-size: 15px;
+    color: #000;
+    display: inline-block; /* Відображає текст в межах елемента */
+    position: absolute;
+    bottom: 9px; /* Текст знаходиться внизу кружечка */
+    width: 100%; /* Ширина, щоб текст не виходив за межі кружечка */
+    text-align: center;
+    font-weight: 900;
+    font-style: italic;
+}
+//* Задайте нові значення для прогрес-бару в секції education */
+.education .progress-bar {
+    height: 5px; /* Встановіть вужчу висоту */
+    background-color: #ff8474 !important; /* Помаранчевий колір */
+    border-radius: 5px;
+    width: 30%; /* Початкова ширина 0% */
+    animation: fillBar 3s forwards ease-in-out; /* Застосуємо анімацію для заповнення */
+}
+
+/* Можна змінити також сам прогрес-бар, щоб він мав правильний відступ */
+.education .progress {
+    height: 5px; /* Зменшити висоту прогрес-бару */
+    background-color: rgba(224, 224, 224, 0.85); /* Легкий фон для прогрес-бару */
+    border-radius: 5px;
+    width: 100%; /* Ширина прогрес-бару */
+    margin-top: -7px;
+}
+.education .progress-bar-1 {
+    animation: fillBarEducation1 2s forwards ease-in-out; /* Анімація для першого прогрес-бару */
+}
+
+.experience-progress{
+  @include progressBar(5px, #ff8474, 20%, 3s);
+}
+
+.progress2{
+    margin-bottom: 30px;
+}
+
+.references .progress-bar {
+    height: 6px; /* Встановіть вужчу висоту */
+    background-color: #ff8474 !important; /* Помаранчевий колір */
+    border-radius: 5px;
+    width: 30%; /* Початкова ширина 0% */
+    animation: fillBar 3s forwards ease-in-out; /* Застосуємо анімацію для заповнення */
+}
+
+/* Можна змінити також сам прогрес-бар, щоб він мав правильний відступ */
+.references .progress {
+    height: 5px; /* Зменшити висоту прогрес-бару */
+    background-color: rgba(224, 224, 224, 0.85); /* Легкий фон для прогрес-бару */
+    border-radius: 5px;
+    width: 100%; /* Ширина прогрес-бару */
+    margin-top: 10px; /* Відступ зверху */
+}
+.references .progress-bar-1 {
+    animation: fillBarEducation1 2s forwards ease-in-out; /* Анімація для першого прогрес-бару */
+}
+/* Анімація для заповнення прогрес-бару */
+.hobbies .progress-bar {
+    height: 6px; /* Встановіть вужчу висоту */
+    background-color: #ff8474 !important; /* Помаранчевий колір */
+    border-radius: 5px;
+    width: 30%; /* Початкова ширина 0% */
+    animation: fillBar 3s forwards ease-in-out; /* Застосуємо анімацію для заповнення */
+}
+
+/* Можна змінити також сам прогрес-бар, щоб він мав правильний відступ */
+.hobbies .progress {
+    height: 5px; /* Зменшити висоту прогрес-бару */
+    background-color: rgba(224, 224, 224, 0.85); /* Легкий фон для прогрес-бару */
+    border-radius: 5px;
+    width: 100%; /* Ширина прогрес-бару */
+    margin-top: 10px; /* Відступ зверху */
+}
+.hobbies .progress-bar-1 {
+    animation: fillBarEducation1 2s forwards ease-in-out; /* Анімація для першого прогрес-бару */
+}
+.languages .progress-bar {
+    height: 6px; /* Встановіть вужчу висоту */
+    background-color: #ff8474 !important; /* Помаранчевий колір */
+    border-radius: 5px;
+    width: 30%; /* Початкова ширина 0% */
+    animation: fillBar 3s forwards ease-in-out; /* Застосуємо анімацію для заповнення */
+}
+
+/* Можна змінити також сам прогрес-бар, щоб він мав правильний відступ */
+.languages .progress {
+    height: 5px; /* Зменшити висоту прогрес-бару */
+    background-color: rgba(224, 224, 224, 0.85); /* Легкий фон для прогрес-бару */
+    border-radius: 5px;
+    width: 100%; /* Ширина прогрес-бару */
+    margin-top: 10px; /* Відступ зверху */
+}
+.languages .progress-bar-1 {
+    animation: fillBarEducation1 2s forwards ease-in-out; /* Анімація для першого прогрес-бару */
+}
+.Job {
+    text-align: left;
+}

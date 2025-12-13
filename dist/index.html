@@ -1,20 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Olena</title>
-    <link href="css/style.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - John A. Eisenhart</title>
+    <link rel="stylesheet" href="css/header.min.css">
+     <link rel="stylesheet" href="css/container.min.css">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" 
+    crossorigin="anonymous"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/smoothness/jquery-ui.css">
 
 </head>
-
 <body>
+
 <div class="container">
-    <div class="card_photo">
-    <img src="img/image.jpg" alt="Photo">
+  <header class="row resume-header text-center py-5">
+    <div class="header-content">
+        <div class="profile-image">
+            <img src="img/pic.png" alt="Profile Picture">
+        </div>
+
+        <h1 class="name"></h1>
+        <h2 class="title">GRAPHIC & WEB DESIGNER</h2>
+        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,<br> when an unknown printer took a galley of type and <br> scrambled it to make a type specimen book.</p>
+        <blockquote class="quote">"Lorem Ipsum is simply dummy text of the printing and typesetting industry."</blockquote>
+    </div>
+</header>
+  <div class="row center-content">
+    <div class="col-md-4">
+      <!-- Contact Section -->
+            <section class="contact">
+                <div class="contact-item">
+                    <div class="phone-container">
+                        <i class="fas fa-phone-alt"></i>
+                        <div class="info">
+                        +1-718-310-5588
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="website-container">
+                        <i class="fas fa-globe"></i>
+                        www.yourwebsite. com
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="address-container">
+                        <i class="fas fa-map-marker-alt"></i>
+                        769 Prudence Street, Lincoln Park
+                    </div>
+                </div>
+            </section>
+    </div>
+    <div class="col-md-6">
+      <div class="skills">
+                <h3 class="uppercase title">Skills</h3>
+                <div class="progress skill-progress">
+
+                    <div class="progress-bar progress-bar-1"></div>
+                </div>
+                <div class="skill-row">
+
+                    <div class="skill-item">
+                        <h5>Adobe Photoshop</h5>
+                        <div class="progress">
+                            <div class="progress-bar" style="--progress-width: 90%; --delay: 0s;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <h5>Adobe Illustrator</h5>
+                        <div class="progress">
+                            <div class="progress-bar" style="--progress-width: 70%; --delay: 0.5s;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-row">
+                    <div class="skill-item">
+                        <h5>Microsoft Word</h5>
+                        <div class="progress">
+                            <div class="progress-bar" style="--progress-width: 85%; --delay: 1s;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <h5>Microsoft PowerPoint</h5>
+                        <div class="progress">
+                            <div class="progress-bar" style="--progress-width: 85%; --delay: 1.5s;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-row">
+                    <div class="skill-item skill-html">
+                        <h5>HTML5 / CSS3</h5>
+                        <div class="progress">
+                            <div class="progress-bar" style="--progress-width: 70%; --delay: 2s;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+  </div>
+    <div class="row">
+        <!-- Left Sidebar (Now completely blue) -->
+        <div class="col-md-4 sidebar">
+
+            
+            <!-- education Section -->
+            <div class="education margin-left">
+                <h3 class="uppercase title">Education</h3>
+                <div class="progress progress2">
+
+                    <div class="progress-bar progress-bar-1"></div>
+                </div>
+
+            </div>
+
+
+
+            <div class="education-item margin-left">
+                    <div class="year">2011-2013</div>
+                    <div class="degree-info">
+                        <h5>Master Degree</h5>
+                        <p class="unik">Stanford University</p>
+                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
+                    </div>
+                </div>
+                <div class="education-item margin-left">
+                    <div class="year">2007-2011</div>
+                    <div class="degree-info">
+                        <h5>Bachelor Degree</h5>
+                        <p class="unik">Chicago University</p>
+                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- References Section -->
+            <section class="references margin-left">
+                <h4 class="uppercase title">References</h4>
+                <div class="progress progress2">
+
+                    <div class="progress-bar progress-bar-1"></div>
+                </div>
+                <p class="small-distance"><strong class="uppercase">Darwin B. Magana</strong></p>
+                <p class="address small-distance">2813 Shobe Lane, Mancos, CO.</p>
+                <p class="small-distance">Tel: +1-970-533-3393</p>
+                <p>Email: www.yourwebsite.com</p>
+            </section>
+
+            <!-- Languages Section -->
+            <section class="languages margin-left">
+                <h4 class="uppercase title">Languages
+                          
+                </h4>
+                <div class="progress">
+
+                    <div class="progress-bar progress-bar-1"></div>
+                </div>
+                <div class="language-charts">
+                    <div class="language-item">
+<p class="chart-title"><span class="percent"></span> <br> <span class="lang"></span></p>
+                        <canvas id="englishChart"></canvas>
+                    </div>
+                    <div class="language-item">
+<p class="chart-title"><span class="percent"></span> <br> <span class="lang"></span></p>
+                        <canvas id="germanChart"></canvas>
+                    </div>
+                    <div class="language-item">
+<p class="chart-title"><span class="percent"></span> <br> <span class="lang"></span></p>
+                        <canvas id="spanishChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+
+        </div>
+
+        <!-- Right Content (Now with Hobbies) -->
+        <div class="col-md-8 content">
+
+            
+            <!-- Job Experience Section -->
+           <div class="Job uppercase"><h3 class="title">Job experience
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#000" class="bi bi-chevron-up sidebar-svg show-hide-main hobby-arrow" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/></svg>
+                      
+           </h3></div>
+              <div class="experience-progress">
+                <div class="progress progress2">
+                        <div class="progress-bar progress-bar-1"></div>
+                    </div>
+              </div>
+            <div class="drop-down">
+            <div class="experience-item">
+                
+                <div class="year-wrapper">
+
+                    <div class="years">
+                        2020-present
+                    </div>
+                </div>
+
+                <div class="content-wrapper">
+
+                    
+                    <h5 class="position uppercase">Senior Web Designer</h5>
+                    <p class="company">Creative Agency
+                      <span class="location"> Chicago</span>
+                    </p>
+                    <p class="description">
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer
+                        took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                        but also the leap into electronic typesetting, remaining essentially unchanged.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="experience-item">
+
+                <div class="year-wrapper">
+                    <div class="years">
+                        2015-2020
+                    </div>
+                </div>
+                <div class="content-wrapper">
+                    <h5 class="position uppercase">Graphic Designer</h5>
+                    <p class="company">Creative Market
+                      <span class="location">United Kingdom</span>
+                    </p>
+                    <p class="description">
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took
+                        a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but
+                        also the leap into electronic typesetting, remaining essentially unchanged.
+                    </p>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="year-wrapper">
+                    <div class="years">
+                       2013-2015
+                    </div>
+                </div>
+                <div class="content-wrapper">
+                    <h5 class="position uppercase">Marketing Manager</h5>
+                    <p class="company">Marketing Agency
+                      <span class="location">United Kingdom</span>
+                    </p>
+                    <p class="description">
+                        Lorem Ipsum is simply dummy text of the printing industry standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                        survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                    </p>
+                </div>
+            </div>
+            </div>
+
+            <!-- Hobbies Section -->
+            <section class="hobbies">
+                <h4 class="uppercase title">Hobbies</h4>
+                <div class="progress progress2">
+
+                    <div class="progress-bar progress-bar-1"></div>
+                </div>
+                <ul>
+                    <li class="hobby-item">
+                        <div class="hobby-icon">
+                            <i class="fas fa-plane fas2"></i>
+                        </div>
+                        <div class="hobby-text uppercase">Traveling</div>
+                    </li>
+                    <li class="hobby-item">
+                        <div class="hobby-icon">
+                            <i class="fas fa-gamepad fas2"></i>
+                        </div>
+                        <div class="hobby-text uppercase">Gaming</div>
+                    </li>
+                    <li class="hobby-item">
+                        <div class="hobby-icon">
+                            <i class="fas fa-music fas2"></i>
+                        </div>
+                        <div class="hobby-text uppercase">Music</div>
+                    </li>
+                    <li class="hobby-item">
+                        <div class="hobby-icon">
+                            <i class="fas fa-dumbbell fas2"></i>
+                        </div>
+                        <div class="hobby-text uppercase">Gyming</div>
+                    </li>
+                    <li class="hobby-item">
+                        <div class="hobby-icon">
+                            <i class="fas fa-paint-brush fas2"></i>
+                        </div>
+                        <div class="hobby-text uppercase">Painting</div>
+                    </li>
+                </ul>
+            </section>
+
+        </div>
     </div>
 </div>
-<script src="js/main.js"></script>
 
 </body>
+<script src="js/scripts.min.js"></script>
+
+
 </html>

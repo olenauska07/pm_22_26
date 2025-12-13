@@ -1,0 +1,96 @@
+:root {
+    --primary-color: #26323e; /* Темно-синій */
+    --secondary-color: #f3966d; /* Яскраво-червоний */
+    --highlight-color: #ff8474; /* Персиковий */
+    --background-color: #f1f1f1; /* Світлий фон */
+    --font-color: #333333; /* Основний текстовий колір */
+    --border-radius: 5px;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--font-color);
+    margin: 0;
+    padding: 0;
+}
+.address {
+    color: #ff8474 !important; /* Використовуйте !important, якщо інші стилі переважають */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0px auto;
+    padding: 0px;
+    background-color: #ffffff;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Верхня частина */
+.resume-header {
+    background: #26323e;
+    color: #fff;
+    padding: 0px 0px;
+    border-radius: 1px 1px 150px 1px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.resume-header .profile-image {
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 222px;
+    height: 250px;
+    overflow: hidden;
+}
+
+.resume-header .profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.resume-header .header-content {
+    flex: 1;
+    padding-right: 200px;
+}
+
+.resume-header .name {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.resume-header .title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    background-color: var(--highlight-color);
+    color: white;
+    padding: 0px 100px;
+    border-radius: 15px;
+    display: inline-block;
+}
+
+.resume-header .quote {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.center-content{
+    background-color: var(--secondary-color);
+    border-radius: 0px 150px 150px 0px;
+}
